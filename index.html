@@ -1,62 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlowVibe Skincare</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fffaf5;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GlowEssence - New Skincare Launch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #ff9a9e;
+      --secondary-color: #fad0c4;
+      --accent-color: #fbc2eb;
+      --text-color: #333;
+      --bg-light: #fff0f6;
+    }
 
-        header {
-            background-color: #f7c59f;
-            padding: 20px;
-            text-align: center;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #fff;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
 
-        nav {
-            background-color: #fff1e6;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
+    header {
+      background: linear-gradient(135deg, var(--main-color), var(--secondary-color));
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
 
-        .hero {
-            background: url('https://images.unsplash.com/photo-1588776814546-ec7e7b0fd1be?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
+    header p {
+      font-size: 1.2rem;
+    }
 
-        .hero h2 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff0f6;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
 
-        .hero p {
-            font-size: 1.3em;
-        }
+    nav a {
+      margin: 0 15px;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        section {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-        .p
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      background: var(--bg-light);
+      border-radius: 12px;
+      padding: 30px;
+      width: 250px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #d6336c;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto;
+      font-style: italic;
+      background-color: #fff8f9;
+      border-left: 4px solid var(--main-color);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .newsletter {
+      background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+      color: #fff;
+      padding: 40px 20px;
+      border-radius: 10px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 250px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #fff;
+      color: var(--text-color);
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #f8e1f4;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: #d6336c;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GlowEssence</h1>
+    <p>Unveil Your Natural Glow — New Skincare Launch</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#features">Features</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#newsletter">Join Us</a>
+  </nav>
+
+  <section id="about">
+    <h2>Introducing Our Latest Skincare Innovation</h2>
+    <p>GlowEssence is crafted with love and science to hydrate, protect, and rejuvenate your skin — naturally.</p>
+    <img src="https://images.unsplash.com/photo-1588776814546-f34a0f0aefde?auto=format&fit=crop&w=800&q=80" alt="Skincare Product" style="width: 100%; max-width: 600px; border-radius: 12px; margin-top: 30px;">
+  </section>
+
+  <section id="features">
+    <h2>Why You'll Love It</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>?? Natural Ingredients</h3>
+        <p>Formulated with organic botanicals, cruelty-free and vegan.</p>
+      </div>
+      <div class="feature">
+        <h3>?? Deep Hydration</h3>
+        <p>Instantly replenishes and locks in moisture for radiant skin.</p>
+      </div>
+      <div class="feature">
+        <h3>? Fast Absorbing</h3>
+        <p>Lightweight formula that blends quickly without greasiness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial">
+      “GlowEssence transformed my skin in just a week! It feels soft, smooth, and looks brighter every day.”
+      <br><br>— Sarah M., Los Angeles
+    </div>
+  </section>
+
+  <section class="newsletter" id="newsletter">
+    <h2>Be the First to Know</h2>
+    <p>Sign up for exclusive launch offers and skincare tips.</p>
+    <form>
+      <input type="email" placeholder="Your Email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Follow us on social media for daily glow inspiration ?</p>
+    <div class="socials">
+      <a href="#">Instagram</a> |
+      <a href="#">TikTok</a> |
+      <a href="#">Facebook</a>
+    </div>
+    <p>&copy; 2025 GlowEssence. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
