@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothify - Trendy Clothing Store</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif;}
+    body {background: #f9f9f9; color: #333;}
+    header {
+      background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+      text-align: center; padding: 5rem 1rem; color: white;
+    }
+    header h1 {font-size: 3rem; margin-bottom: 0.5rem;}
+    header p {font-size: 1.2rem;}
+
+    .products {display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1.5rem; padding: 2rem;}
+    .card {
+      background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden; transition: transform 0.3s ease;
+    }
+    .card:hover {transform: translateY(-5px);}
+    .card img {width: 100%; height: 220px; object-fit: cover;}
+    .card-content {padding: 1rem;}
+    .card-content h3 {margin-bottom: 0.5rem;}
+    .card-content p {font-size: 0.9rem; margin-bottom: 0.5rem;}
+    .price {font-weight: bold; margin-bottom: 0.8rem; color: #e63946;}
+    .btn {
+      display: inline-block; padding: 0.6rem 1rem; background: #1d3557; color: white;
+      border-radius: 6px; text-decoration: none; transition: 0.3s;
+    }
+    .btn:hover {background: #457b9d;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Clothify</h1>
+    <p>Elevate Your Style with Our Trendy Collection</p>
+  </header>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x220" alt="T-Shirt">
+      <div class="card-content">
+        <h3>Classic T-Shirt</h3>
+        <p>Soft cotton, perfect for everyday wear.</p>
+        <div class="price">$20</div>
+        <a href="form.html" class="btn" onclick="selectProduct('Classic T-Shirt - $20')">Buy Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x220" alt="Jeans">
+      <div class="card-content">
+        <h3>Denim Jeans</h3>
+        <p>Stylish slim fit with stretch comfort.</p>
+        <div class="price">$45</div>
+        <a href="form.html" class="btn" onclick="selectProduct('Denim Jeans - $45')">Buy Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x220" alt="Dress">
+      <div class="card-content">
+        <h3>Summer Dress</h3>
+        <p>Lightweight and breathable fabric.</p>
+        <div class="price">$35</div>
+        <a href="form.html" class="btn" onclick="selectProduct('Summer Dress - $35')">Buy Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x220" alt="Jacket">
+      <div class="card-content">
+        <h3>Leather Jacket</h3>
+        <p>Classic biker look with modern cut.</p>
+        <div class="price">$120</div>
+        <a href="form.html" class="btn" onclick="selectProduct('Leather Jacket - $120')">Buy Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x220" alt="Hoodie">
+      <div class="card-content">
+        <h3>Comfy Hoodie</h3>
+        <p>Cozy fleece hoodie for chilly days.</p>
+        <div class="price">$30</div>
+        <a href="form.html" class="btn" onclick="selectProduct('Comfy Hoodie - $30')">Buy Now</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x220" alt="Sneakers">
+      <div class="card-content">
+        <h3>Casual Sneakers</h3>
+        <p>Lightweight and stylish for daily wear.</p>
+        <div class="price">$60</div>
+        <a href="form.html" class="btn" onclick="selectProduct('Casual Sneakers - $60')">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function selectProduct(product) {
+      localStorage.setItem('selectedProduct', product);
+    }
+  </script>
+</body>
+</html>
